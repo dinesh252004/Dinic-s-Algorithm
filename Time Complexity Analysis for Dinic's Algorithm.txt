@@ -1,0 +1,27 @@
+Time Complexity Analysis
+The time complexity of Dinic's Algorithm implementation provided in the code can be analyzed as follows:
+1. BFS (Breadth-First Search)
+The BFS function is used to check if there exists a path from the source to the sink.
+It traverses the graph using a breadth-first search, visiting each vertex once.
+The worst-case time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+2. Dinic's Algorithm
+The main loop of Dinic's Algorithm runs until there are no more augmenting paths from the source to the sink.
+In each iteration of the main loop, BFS is called to find an augmenting path, and then the flow is updated along that path.
+Each call to BFS takes O(V + E) time.
+In the worst case, the algorithm might need to run BFS O(V) times.
+Inside the main loop, finding the bottleneck capacity along the augmenting path takes O(V) time.
+Overall, the time complexity of Dinic's Algorithm is O(V^2 * E).
+3. Reading Input Graphs
+The time complexity of reading graphs from the input file depends on the number of vertices (V) and edges (E) in each graph.
+The process of reading each graph takes O(E) time.
+Since the input file may contain multiple graphs, the total time complexity for reading all graphs is O(N * E), where N is the total number of edges across all graphs.
+Conclusion
+In summary, the overall time complexity of the provided implementation of Dinic's Algorithm is O(N * E + V^2 * E), where N is the total number of edges across all graphs and V is the maximum number of vertices in any graph.
+Note: The provided analysis assumes that the input graphs are sparse, meaning the number of edges is proportional to the number of vertices. In dense graphs where the number of edges is closer to V^2, the time complexity can be higher.
+
+
+
+
+
+
+
